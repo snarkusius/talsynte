@@ -200,6 +200,3 @@ valt	+v+aaa+l+t
 var	+v+aaa+r
 vare	+v+aaa+R+e_
 vem	+v+e_+m
-
-
-https://stackoverflow.com/questions/26643688/how-do-i-split-a-string-in-rust
