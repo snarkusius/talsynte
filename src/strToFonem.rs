@@ -205,5 +205,5 @@ ord_med_fonem.insert("var","v+aaa+r");
 ord_med_fonem.insert("vare","v+aaa+R+e_");
 ord_med_fonem.insert("vem","v+e_+m");
 
-    return ord_med_fonem[string];
+return ord_med_fonem[string];
 }

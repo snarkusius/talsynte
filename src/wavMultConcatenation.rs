@@ -11,6 +11,7 @@ pub fn run(filesInput: Vec<String>, filename: &str){
             writer.write_sample(x.unwrap()).unwrap();
         }
     }
+}
     // let mut reader1 = hound::WavReader::open(filesInput[0]).unwrap();
     // let mut reader2 = hound::WavReader::open(filesInput[1]).unwrap();
 
@@ -22,4 +23,3 @@ pub fn run(filesInput: Vec<String>, filename: &str){
     // for x in signal1.chain(signal2) {
     //     writer.write_sample(x.unwrap()).unwrap();
     // }
-}
