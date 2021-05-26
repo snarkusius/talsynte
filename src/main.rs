@@ -1,15 +1,16 @@
 
-mod wavConcatenation;
-mod strToFonem;
-mod wavMultConcatenation;
+// mod wav_concatenation;
+mod str_to_fonem;
+mod wav_mult_concatenation;
 fn main() {
 
-    let mut base_str = String::from("hej jag anger torsdagens gemensam barock");
+    let base_str = String::from("hej jag anger torsdagens gemensam barock");
+    let output_fil_name: &str = "output/test_file_output.wav";
     let mut return_str = String::from("");
-    let mut fonemfiles: Vec<String> = vec![];
+    let mut fonem_files: Vec<String> = vec![];
 
     for word in base_str.split_whitespace() {
-        return_str.push_str(strToFonem::run(word));
+        return_str.push_str(str_to_fonem::run(word));
         return_str.push(' ');
     }
     // println!("{:?}",return_str);
@@ -18,12 +19,12 @@ fn main() {
     // }
     for word in return_str.split_whitespace() {
         for fonem in word.split('+') {
-            let mut filenam = String::from("fonem/");
-            filenam.push_str(fonem);
-            filenam.push_str(".wav");
-            fonemfiles.push(filenam);
+            let mut file_name = String::from("fonem/");
+            file_name.push_str(fonem);
+            file_name.push_str(".wav");
+            fonem_files.push(file_name);
         }
-        fonemfiles.push(String::from("fonem/silence500ms.wav"));
+        fonem_files.push(String::from("fonem/silence500ms.wav"));
     }
-    wavMultConcatenation::run(fonemfiles, "output/testis.wav");
+    wav_mult_concatenation::run(fonem_files, output_fil_name);
 }
