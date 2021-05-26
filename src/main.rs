@@ -3,6 +3,18 @@ mod wavConcatenation;
 mod strToFonem;
 mod wavMultConcatenation;
 fn main() {
+    // use std::io::{stdin,stdout,Write};
+    // let mut s=String::new();
+    // print!("Please enter some text: ");
+    // let _=stdout().flush();
+    // stdin().read_line(&mut s).expect("Did not enter a correct string");
+    // if let Some('\n')=s.chars().next_back() {
+    //     s.pop();
+    // }
+    // if let Some('\r')=s.chars().next_back() {
+    //     s.pop();
+    // }
+
     let mut base_str = String::from("hej jag anger torsdagens gemensam barock");
     let mut return_str = String::from("");
     let mut fonemfiles: Vec<String> = vec![];
